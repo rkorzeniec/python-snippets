@@ -10,6 +10,9 @@ class ReverseString:
 
         return reversed_text
 
+    def reverse2(self, text: str) -> str:
+        return text[::-1]
+
 
 class TestReverseString(unittest.TestCase):
     def setUp(self):
@@ -25,6 +28,17 @@ class TestReverseString(unittest.TestCase):
 
     def test_civic(self):
         self.assertEqual(self.reverser.reverse('civic'), 'civic')
+
+    def test_cat2(self):
+        self.assertEqual(self.reverser.reverse2('Cat'), 'taC')
+
+    def test_sentence2(self):
+        self.assertEqual(
+            self.reverser.reverse2('The Daily Byte'), 'etyB yliaD ehT'
+        )
+
+    def test_civic2(self):
+        self.assertEqual(self.reverser.reverse2('civic'), 'civic')
 
 if __name__ == "__main__":
     unittest.main()
