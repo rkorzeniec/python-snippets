@@ -11,7 +11,8 @@ class Solution:
         triplets: List[List[int]] = []
         previous_num: int = None
         nums = sorted(nums)
-        print
+
+        nums.sort()
 
         for index in range(len(nums) - 2):
             if nums[index] > 0:
@@ -25,23 +26,20 @@ class Solution:
             right: int = len(nums) - 1
 
             while left < right:
-                triplet = [nums[index], nums[left], nums[right]]
-                triplet_sum = sum(triplet)
+                triplets_sum = nums[index] + nums[left] + nums[right]
 
-                if triplet_sum > 0:
+                if triplets_sum > 0:
                     right -= 1
-                elif triplet_sum < 0:
+                elif triplets_sum < 0:
                     left += 1
                 else:
-                    triplets.append(triplet)
-                    right -= 1
-                    previous_left_num = nums[left]
+                    triplets.append([nums[index], nums[left], nums[right]])
+                    left += 1
 
-                    while left < len(nums) and nums[left] == previous_left_num:
+                    while left < right and nums[left] == nums[left - 1]:
                         left += 1
 
         return triplets
-
 
 
 class TestSolution(unittest.TestCase):
@@ -58,6 +56,9 @@ class TestSolution(unittest.TestCase):
 
     def test_3(self):
         self.assertEqual(self.service.threeSum([0]), [])
+
+    def test_4(self):
+        self.assertEqual(self.service.threeSum([0, 0, 0]), [[0, 0, 0]])
 
 if __name__ == "__main__":
     unittest.main()
