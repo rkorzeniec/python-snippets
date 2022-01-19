@@ -1,6 +1,5 @@
 # https://community.topcoder.com/stat?c=problem_statement&pm=2923&rd=5854
 
-from operator import itemgetter
 from typing import List
 import unittest
 
