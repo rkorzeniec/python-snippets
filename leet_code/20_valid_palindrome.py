@@ -1,7 +1,6 @@
-# https://leetcode.com/problems/valid-palindrome/
+# https://leetcode.com/problems/valid-parentheses
 
 import re
-from typing import List
 import unittest
 
 class Solution:

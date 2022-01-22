@@ -1,6 +1,5 @@
-# https://leetcode.com/problems/remove-nth-node-from-end-of-list
+# https://leetcode.com/problems/product-of-array-except-self
 
-import enum
 from typing import List, Optional
 import unittest
 
