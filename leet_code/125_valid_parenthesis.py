@@ -1,8 +1,10 @@
-# https://leetcode.com/problems/valid-palindrome/
+# https://leetcode.com/problems/valid-parentheses
 
 from typing import List
 import unittest
 
+# Runtime: 32 ms, faster than 75.89% of Python3 online submissions for Valid Parentheses.
+# Memory Usage: 44.3 MB, less than 7.41 % of Python3 online submissions for Valid Parentheses.
 class Solution:
     def isValid(self, s: str) -> bool:
         stack = self.process_stack([], s)

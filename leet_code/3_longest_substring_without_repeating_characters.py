@@ -3,6 +3,8 @@
 from typing import List
 import unittest
 
+# Runtime: 105 ms, faster than 35.07% of Python3 online submissions for Longest Substring Without Repeating Characters.
+# Memory Usage: 14.5 MB, less than 24.73 % of Python3 online submissions for Longest Substring Without Repeating Characters.
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
         scanned_chars: List[str] = []

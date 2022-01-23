@@ -3,12 +3,6 @@
 from typing import List, Optional
 import unittest
 
-
-class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
-
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
         answer: List[int] = []
@@ -47,7 +41,8 @@ class Solution2:
         return answer
 
 
-
+# Runtime: 239 ms, faster than 74.11% of Python3 online submissions for Product of Array Except Self.
+# Memory Usage: 21 MB, less than 93.53 % of Python3 online submissions for Product of Array Except Self.
 class Solution3:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
         product = 1

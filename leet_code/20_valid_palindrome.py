@@ -1,4 +1,4 @@
-# https://leetcode.com/problems/valid-parentheses
+# https://leetcode.com/problems/valid-palindrome/
 
 import re
 import unittest
@@ -10,6 +10,8 @@ class Solution:
         return s == s[::-1]
 
 
+# Runtime: 40 ms, faster than 92.39% of Python3 online submissions for Valid Palindrome.
+# Memory Usage: 15.5 MB, less than 25.55 % of Python3 online submissions for Valid Palindrome.
 class Solution2:
     def isPalindrome(self, s: str) -> bool:
         s = re.sub("[^a-zA-Z0-9]+", '', s.lower())

@@ -3,6 +3,8 @@
 from typing import List
 import unittest
 
+# Runtime: 732 ms, faster than 81.78% of Python3 online submissions for Container With Most Water.
+# Memory Usage: 27.7 MB, less than 5.77 % of Python3 online submissions for Container With Most Water.
 class Solution:
     def maxArea(self, height: List[int]) -> int:
         max_area: int = 0

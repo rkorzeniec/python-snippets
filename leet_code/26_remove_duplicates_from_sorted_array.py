@@ -21,6 +21,8 @@ class Solution:
         return index
 
 
+# Runtime: 133 ms, faster than 39.94% of Python3 online submissions for Remove Duplicates from Sorted Array.
+# Memory Usage: 15.7 MB, less than 48.56 % of Python3 online submissions for Remove Duplicates from Sorted Array.
 class Solution2:
     def removeDuplicates(self, nums: List[int]) -> int:
         if len(nums) == 0:

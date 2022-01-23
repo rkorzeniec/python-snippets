@@ -35,6 +35,8 @@ class Solution3:
         return nums
 
 
+# Runtime: 204 ms, faster than 96.86% of Python3 online submissions for Rotate Array.
+# Memory Usage: 25.5 MB, less than 84.40 % of Python3 online submissions for Rotate Array.
 class Solution4:
     def rotate(self, nums: List[int], k: int) -> List[int]:
         if(k > len(nums) - 1):

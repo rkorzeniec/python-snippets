@@ -3,6 +3,8 @@
 from typing import List
 import unittest
 
+# Runtime: 844 ms, faster than 79.77% of Python3 online submissions for 3Sum.
+# Memory Usage: 17.5 MB, less than 48.98 % of Python3 online submissions for 3Sum.
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
         if len(nums) < 3:
