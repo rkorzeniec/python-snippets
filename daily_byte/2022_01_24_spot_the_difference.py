@@ -52,7 +52,7 @@ class TestSolution(unittest.TestCase):
     def setUp(self):
         self.solution = Solution()
         self.solution2 = Solution2()
-        self.solution3 = Solution2()
+        self.solution3 = Solution3()
 
     def test_1(self):
         self.assertEqual(self.solution.check('foobar', 'barfoot'), 't')
@@ -61,13 +61,13 @@ class TestSolution(unittest.TestCase):
 
     def test_2(self):
         self.assertEqual(self.solution.check('ide', 'idea'), 'a')
-        self.assertEqual(self.solution2.check('foobar', 'barfoot'), 't')
-        self.assertEqual(self.solution3.check('foobar', 'barfoot'), 't')
+        self.assertEqual(self.solution2.check('ide', 'idea'), 'a')
+        self.assertEqual(self.solution3.check('ide', 'idea'), 'a')
 
     def test_3(self):
         self.assertEqual(self.solution.check('coding', 'ingcod'), '')
-        self.assertEqual(self.solution2.check('foobar', 'barfoot'), 't')
-        self.assertEqual(self.solution3.check('foobar', 'barfoot'), 't')
+        self.assertEqual(self.solution2.check('coding', 'ingcod'), '')
+        self.assertEqual(self.solution3.check('coding', 'ingcod'), '')
 
 if __name__ == "__main__":
     unittest.main()
