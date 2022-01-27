@@ -4,7 +4,6 @@
 # Return the letter that was randomly added to t if it exists, otherwise, return ’  ‘.
 # Note: You may assume that at most one additional character can be added to t.
 
-from typing import List
 import re
 import unittest
 
