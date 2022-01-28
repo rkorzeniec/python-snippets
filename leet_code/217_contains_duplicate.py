@@ -1,8 +1,10 @@
 # https://leetcode.com/problems/contains-duplicate/
 
-from typing import List, Optional
+from typing import List
 import unittest
 
+# Runtime: 448 ms, faster than 64.99% of Python3 online submissions for Contains Duplicate.
+# Memory Usage: 25.9 MB, less than 51.51 % of Python3 online submissions for Contains Duplicate.
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
         check_nums: dict[int, int] = {}
@@ -15,6 +17,8 @@ class Solution:
         return False
 
 
+# Runtime: 456 ms, faster than 57.96% of Python3 online submissions for Contains Duplicate.
+# Memory Usage: 26.1 MB, less than 23.45 % of Python3 online submissions for Contains Duplicate.
 class Solution2:
     def containsDuplicate(self, nums: List[int]) -> bool:
         return len(set(nums)) != len(nums)
