@@ -2,7 +2,6 @@
 # where each pixel in the image is 4 bytes, write a method to rotate the image by 90 degrees.
 # Can you do this in place?
 
-from platform import java_ver
 from typing import List
 import unittest
 

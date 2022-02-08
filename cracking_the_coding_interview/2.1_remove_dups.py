@@ -3,7 +3,6 @@
 
 from typing import Optional
 import unittest
-from unittest import runner
 
 class ListNode:
     def __init__(self, val=0, next=None):
