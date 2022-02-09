@@ -6,7 +6,6 @@
 # Input: the node c from the linked list a -> b -> c -> d -> e -> f
 # Result: nothing is returned, but the new linked list looks like a -> b -> d -> e - >f
 
-from tkinter import Y
 from typing import Optional
 import unittest
 
@@ -17,20 +16,14 @@ class ListNode:
 
 
 class Solution:
-    def delete_middle_node(self, list: Optional[ListNode], node: Optional[ListNode]) -> None:
-        if list is None or node == list:
-            return None
+    def delete_mid_node(node: Optional[ListNode]) -> bool:
+        if node is None or node.next is None:
+            return False
 
-        head: Optional[ListNode] = list.next
-        tail: Optional[ListNode] = list
+        node.val = node.next.val
+        node.next = node.next.next
 
-        while head:
-            if head == node:
-                tail.next = head.next
-            head = head.next
-            tail = tail.next
-
-        return tail
+        return True
 
 
 class TestSolution(unittest.TestCase):
@@ -45,7 +38,7 @@ class TestSolution(unittest.TestCase):
         i1 = ListNode(2, i2)
         i0 = ListNode(1, i1)
 
-        self.assertEqual(self.solution.delete_middle_node(i0, i2), None)
+        self.assertEqual(self.solution.delete_mid_node(i2), True)
         self.assertEqual(i0.next, i1)
         self.assertEqual(i1.next, i3)
         self.assertEqual(i3.next, i4)
@@ -53,10 +46,13 @@ class TestSolution(unittest.TestCase):
         self.assertEqual(i5.next, None)
 
     def test_2(self):
-        i1 = ListNode(2, None)
+        self.assertEqual(self.solution.delete_mid_node(None), False)
+
+    def test_3(self):
+        i1 = ListNode(2)
         i0 = ListNode(1, i1)
 
-        self.assertEqual(self.solution.delete_middle_node(i0, i0), None)
+        self.assertEqual(self.solution.delete_mid_node(i1), False)
         self.assertEqual(i0.next, i1)
         self.assertEqual(i1.next, None)
 
