@@ -28,6 +28,8 @@ class Solution:
         return self.process_stack(stack, s[1:])
 
 
+# Runtime: 30 ms, faster than 82.75% of Python3 online submissions for Valid Parentheses.
+# Memory Usage: 13.9 MB, less than 83.57 % of Python3 online submissions for Valid Parentheses.
 class Solution2:
     def isValid(self, s: str) -> bool:
         stack = []
