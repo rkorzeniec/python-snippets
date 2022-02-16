@@ -71,23 +71,6 @@ class Solution2:
         return result
 
 
-
-# FOLLOW UP
-# Suppose the digits are stored in forward order. Repeat the above problem.
-#
-# EXAMPLE
-# Input: (6 -> 1 -> 7) + (2 -> 9 -> 5). That is, 617 + 295.
-# Output: 9 -> 1 -> 2. That is, 912.
-
-# class Solution2:
-#     def sum(self, node1: Optional[ListNode], node2: Optional[ListNode]) -> Optional[ListNode]:
-#         return self.sum_nodes(node1, node2, 0)
-
-#     def sum_nodes(self, node1: Optional[ListNode], node2: Optional[ListNode], carry: int) -> Optional[ListNode]:
-#         if node1.next is None and node2.next is None:
-
-
-
 class TestSolution(unittest.TestCase):
     def setUp(self):
         self.solution = Solution()
