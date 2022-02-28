@@ -1,3 +1,7 @@
+# This problem was recently asked by Microsoft.
+
+# Given a list of strings, find the longest common prefix between all strings.
+
 import unittest
 
 class LongestCommonPrefix:
