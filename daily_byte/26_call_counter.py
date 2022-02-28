@@ -77,6 +77,7 @@ class CallCounter2:
     def __size(self) -> int:
         return len(self.pings)
 
+
 class TestSolution(unittest.TestCase):
     def setUp(self):
         self.counter = CallCounter()
